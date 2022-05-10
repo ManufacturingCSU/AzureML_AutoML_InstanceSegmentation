@@ -30,7 +30,7 @@ def init():
 
     try:
         logger.info("Loading model from path: {}.".format(model_path))
-        model_settings = {"min_size": 600, "max_size": 1333, "box_score_thresh": 0.3, "nms_iou_thresh": 0.5, "box_detections_per_img": 100, "tile_grid_size": null, "tile_overlap_ratio": 0.25, "tile_predictions_nms_thresh": 0.25}
+        model_settings = {"min_size": 600, "max_size": 1333, "box_score_thresh": 0.3, "nms_iou_thresh": 0.5, "box_detections_per_img": 100, "tile_overlap_ratio": 0.25, "tile_predictions_nms_thresh": 0.25}
         model = load_model(TASK_TYPE, model_path, **model_settings)
         logger.info("Loading successful.")
     except Exception as e:
