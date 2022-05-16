@@ -114,7 +114,7 @@ From JupyterLab, double-click the `03_Instance_Segmentation_Model_Testing.ipynb`
 
 - Annotated image that has been scored with deployed model
 
-[Model Testing](img/16.png?raw=true "Model Testing")
+![Model Testing](img/16.png?raw=true "Model Testing")
 
 ## Adapting and Extending...
 
