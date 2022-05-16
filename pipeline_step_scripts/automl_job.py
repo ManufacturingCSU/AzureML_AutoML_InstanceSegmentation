@@ -1,4 +1,4 @@
-from azureml.core import Run, Dataset
+from azureml.core import Run, Dataset, Environment
 import argparse
 from azureml.core.compute import ComputeTarget
 import os
@@ -50,9 +50,6 @@ tuning_settings = {
     "iterations": 20,
     "max_concurrent_iterations": 5,
     "hyperparameter_sampling": GridParameterSampling({'model_name': choice('maskrcnn_resnet18_fpn', 'maskrcnn_resnet34_fpn', 'maskrcnn_resnet50_fpn','maskrcnn_resnet101_fpn','maskrcnn_resnet152_fpn', 'yolov5'), 'number_of_epochs': 50, 'img_size': 640}),
-    # "early_termination_policy": BanditPolicy(
-    #     evaluation_interval=2, slack_factor=0.2, delay_evaluation=6
-    # ),
     "enable_early_stopping": False
 }
 
@@ -68,9 +65,6 @@ new_run.wait_for_completion()
 
 best_child_run = new_run.get_best_child()
 metrics = best_child_run.get_metrics()
-# mAP = max(metrics['mean_average_precision'])
-# recall = max(metrics['recall'])
-# precision = max(metrics['precision'])
 
 updated_tags = metrics
 
