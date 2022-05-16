@@ -3,16 +3,12 @@
 Auzre Machine Learning's [AutoML for Images](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models) functionality can be used to train custom image classification, object detection, and instance segmentation models. The notebooks contained within this sample repository demonstrate an end-to-end sample for: 
 
 ✅ Creating compute resources for training and inferencing operations</br>
-✅ Uploading sample images to an AML datastore 
-✅ Creating and registering a labeled image dataset
-
-✔️ Building and publishing a reusable model training pipeline which submits an AutoML for Images training job
-
-✔️ Registering a trained instance segmentation model to the AML workspace
-
-✔️ Deploying a trained model to a real-time endpoint (Azure Kubernetes)
-
-✔️ Submitting HTTP requests to consume a deployed instance segmentation model 
+✅ Uploading sample images to an AML datastore </br>
+✅ Creating and registering a labeled image dataset </br>
+✅ Building and publishing a reusable model training pipeline which submits an AutoML for Images training job </br>
+✅ Registering a trained instance segmentation model to the AML workspace </br>
+✅ Deploying a trained model to a real-time endpoint (Azure Kubernetes Service) </br>
+✅ Submitting HTTP requests to consume a deployed instance segmentation model </br>
 
 Follow the 'Getting Started' guide below for step-by-step instructions for executing this sample.
 
