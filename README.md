@@ -1,7 +1,7 @@
-# AzureML_AutoML_for_Images_Instance_Segmentation
+# Azure ML - AutoML for Images: Instance Segmentation
 
 ### Sample Images
-Sample images used within this repository were taken from the [CBCL StreetScenes Challenge Framework]() which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
+Sample images used within this repository were taken from the [CBCL StreetScenes Challenge Framework](http://cbcl.mit.edu/software-datasets/streetscenes/) which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
 
 -----
 
