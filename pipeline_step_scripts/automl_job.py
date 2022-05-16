@@ -35,17 +35,6 @@ from azureml.train.automl import AutoMLImageConfig
 from azureml.train.hyperdrive import GridParameterSampling, choice
 from azureml.automl.core.shared.constants import ImageTask
 
-parameter_space = {
-    "model": choice(
-        {
-            "model_name": choice("yolov5"),
-            "learning_rate": uniform(0.0001, 0.01),
-            "model_size": choice("small", "medium"),  # model-specific
-            'img_size': 512, # model-specific; might need GPU with large memory
-        }
-    ),
-}
-
 tuning_settings = {
     "iterations": 20,
     "max_concurrent_iterations": 5,

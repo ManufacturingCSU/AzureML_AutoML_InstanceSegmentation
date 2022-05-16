@@ -116,10 +116,50 @@ From JupyterLab, double-click the `03_Instance_Segmentation_Model_Testing.ipynb`
 
 ![Model Testing](img/16.png?raw=true "Model Testing")
 
-## Adapting and Extending...
+## Adapting and Extending
 
-Create labeled datasets and use as inputs to model training operations
-Alter the type of AutoML for Images job
+This repo contains code which build a reusable (AutoML) instance segmentation model training pipeline. You can provide your own custom labeled datasets as inputs to this pipeline to train models specific to your data. Additionally, you can modify the AutoML job settings - specifically your instance segmentation model tuning parameters - inside of the `./pipeline_step_scripts/automl_job.py` file. See below for instructions on editing the training parameters and incorporating your own data into model training operations.
+
+### Updating AutoML Training Parameters
+
+The following block of code starting on line 38 inside `./pipeline_step_scripts/automl_job.py` defines the AutoML model selection and hyperparameter tuning settings. These can be updated/modified to your particular model training task - [see the document linked here for more details on updating hyperparameters for computer vision tasks in AutoML](https://docs.microsoft.com/en-us/azure/machine-learning/reference-automl-images-hyperparameters). After making any changes, be sure to republish your pipeline before submitting additional runs. 
+
+```
+tuning_settings = {
+    "iterations": 20,
+    "max_concurrent_iterations": 5,
+    "hyperparameter_sampling": GridParameterSampling({'model_name': choice('maskrcnn_resnet18_fpn', 'maskrcnn_resnet34_fpn', 'maskrcnn_resnet50_fpn','maskrcnn_resnet101_fpn','maskrcnn_resnet152_fpn', 'yolov5'), 'number_of_epochs': 50, 'img_size': 640}),
+    "enable_early_stopping": False
+}
+
+```
+
+### Training with your own Data
+
+To train a new instance segmentation model using your own labeled images, either create and export a new labeled dataset using the Azure Machine Learning data labeling tools, or upload a labeled dataset as a JSONL file to the AML workspace.
+
+[See the attached document for details on preparing data for computer vision tasks with AutoML](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-prepare-datasets-for-automl-images). 
+
+To create a labeled dataset using the Azure ML data labeling tools see the articles below for instructions on creating a new data labeling project, labeling images and exporting. 
+
+ - [Create an image labeling project and export labels](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-image-labeling-projects)
+ - [Labeling images and text documents](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-label-data)
+
+ Below is a pictorial guide showing how to export a labeled dataset, and consume it in the deployed instance segmentation training pipeline.
+
+ - After creating a labeling project and labeling sample images, navigate to the 'Export' tab at the top of the project and select 'Azure ML Dataset'. Once prompted quick submit.
+
+ ![Export Labeled Dataset](img/17.png?raw=true "Export Labeled Dataset")
+
+ - Validate the dataset contains the images/annotations you expect by navigating to the 'Datasets' tab on the left sidebar menu. You should see a newly created dataset with an appended timestamp postfix in your list of datasets. Copy this dataset name to your clipboard.
+
+ ![Exported Labeled Dataset](img/18.png?raw=true "Exported Labeled Dataset")
+
+ - Under Pipelines, navigate to pipeline endpoints and select the `Instance Segmentation Model Training` pipeline. Click the submit button and select an experiment to submit your new pipeline run under. Under the pipeline parameters paste your copied dataset name under the `dataset_name` field and update the `model_name` to whatever you want your new model to be called. Once this is done, click the 'Submit' button.
+
+ ![Run Pipeline](img/19.png?raw=true "Pipeline")
+
+Once your pipeline run is complete, you should see a new model added to your registry which matches the name you provided above!
 
 ## Sample Images
 Acknowledgement - Sample images used within this repository were retrieved from the [CBCL StreetScenes Challenge Framework](http://cbcl.mit.edu/software-datasets/streetscenes/) which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
