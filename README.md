@@ -82,9 +82,13 @@ After executing all cells (should take ~1 minute) you can validate the setup ins
 
 ![Image Datasets](img/11.png?raw=true "Image Datasets")
 
+### Run 02. Notebook to Create AutoML for Images Training Pipeline & Submit Pipeline Run
+
+From JupyterLab, double-click the `02_Create_AML_Model_Training_Pipeline.ipynb` notebook to create a reusable instance segmentation model training pipeline that leverages AutoML for Images under the hood. Again, from the top menubar click Run and then select 'Run All Cells' to trigger all cells in the notebook.
+
 
 ## Sample Images
-Sample images used within this repository were taken from the [CBCL StreetScenes Challenge Framework](http://cbcl.mit.edu/software-datasets/streetscenes/) which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
+Sample images used within this repository were retrieved from the [CBCL StreetScenes Challenge Framework](http://cbcl.mit.edu/software-datasets/streetscenes/) which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
 
 -----
 
