@@ -1,6 +1,10 @@
 # Azure ML - AutoML for Images: Instance Segmentation
 
-Auzre Machine Learning's [AutoML for Images](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models) functionality can be used to train custom image classification, object detection, and instance segmentation models. The notebooks contained within this sample repository demonstrate an end-to-end sample for: 
+Auzre Machine Learning's [AutoML for Images](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models) functionality can be used to train custom image classification, object detection, and instance segmentation models. 
+
+![Azure ML - AutoML for Images: Instance Segmentation](img/01.png?raw=true "Azure ML - AutoML for Images: Instance Segmentation")
+
+The notebooks contained within this sample repository demonstrate an end-to-end sample for: 
 
 ✅ Creating compute resources for training and inferencing operations</br>
 ✅ Uploading sample images to an AML datastore </br>
@@ -10,9 +14,7 @@ Auzre Machine Learning's [AutoML for Images](https://docs.microsoft.com/en-us/az
 ✅ Deploying a trained model to a real-time endpoint (Azure Kubernetes Service) </br>
 ✅ Submitting HTTP requests to consume a deployed instance segmentation model </br>
 
-Follow the 'Getting Started' guide below for step-by-step instructions for executing this sample.
-
-![Azure ML - AutoML for Images: Instance Segmentation](img/01.png?raw=true "Azure ML - AutoML for Images: Instance Segmentation")
+Follow the step-by-step guide below for instructions on running this demo, and adapting and extending with your own images!
 
 ## Getting Started
 
