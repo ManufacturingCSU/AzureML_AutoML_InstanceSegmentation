@@ -104,6 +104,17 @@ After executing all cells (should take ~1 minute) you can validate creation of t
 
 From JupyterLab, double-click the `03_Instance_Segmentation_Model_Testing.ipynb` notebook and again click Run from the top menubar then select 'Run All Cells' to run the full notebook. This will deploy a new inferencing compute resource `cluster-aks` and deploy your registered `Street_Segmentation_Model` to this endpoint, then submit sample images via an API call for scoring and display within the notebook.
 
+- Successfully deployed AKS cluster
+
+![AKS Create](img/14.png?raw=true "AKS Create")
+
+- Instance segmentation model `Street_Segmentation_Model` successfully deployed to AKS
+
+![Model Deployment](img/15.png?raw=true "Model Deployment")
+
+- Annotated image that has been scored with deployed model
+
+[Model Testing](img/16.png?raw=true "Model Testing")
 
 ## Adapting and Extending...
 
