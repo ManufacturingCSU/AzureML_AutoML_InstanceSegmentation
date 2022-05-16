@@ -1,14 +1,14 @@
 # Azure ML - AutoML for Images: Instance Segmentation
 
-Auzre Machine Learning's AutoML for Images functionality can be used to train custom image classification, object detection, and instance segmentation models. The notebooks contained within this sample repository demonstrate an end-to-end sample for: 
+Auzre Machine Learning's [AutoML for Images](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models) functionality can be used to train custom image classification, object detection, and instance segmentation models. The notebooks contained within this sample repository demonstrate an end-to-end sample for: 
 
-- Creating compute resources for training and inferencing operations
-- Uploading sample images to an AML datastore 
-- Creating and registering a labeled image dataset
-- Building and publishing a reusable model training pipeline which submits an AutoML for Images training job
-- Registering a trained instance segmentation model to the AML workspace
-- Deploying a trained model to a real-time endpoint (Azure Kubernetes)
-- Submitting HTTP requests to consume a deployed instance segmentation model 
+✔️ Creating compute resources for training and inferencing operations
+✔️ Uploading sample images to an AML datastore 
+✔️ Creating and registering a labeled image dataset
+✔️ Building and publishing a reusable model training pipeline which submits an AutoML for Images training job
+✔️ Registering a trained instance segmentation model to the AML workspace
+✔️ Deploying a trained model to a real-time endpoint (Azure Kubernetes)
+✔️ Submitting HTTP requests to consume a deployed instance segmentation model 
 
 Follow the 'Getting Started' guide below for step-by-step instructions for executing this sample.
 
@@ -16,7 +16,7 @@ Follow the 'Getting Started' guide below for step-by-step instructions for execu
 
 ## Getting Started
 
-Following the instructions below to deploy and run this demo.
+Following the instructions below to set up an [Azure Machine Learning](https://docs.microsoft.com/EN-US/azure/machine-learning/overview-what-is-azure-machine-learning) workspace, create necessary compute resources, and run the instance segmentation training demo!
 
 ### Required Resources
 
