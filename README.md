@@ -10,10 +10,9 @@ Auzre Machine Learning's AutoML for Images functionality can be used to train cu
 - Deploying a trained model to a real-time endpoint (Azure Kubernetes)
 - Submitting HTTP requests to consume a deployed instance segmentation model 
 
+Follow the 'Getting Started' guide below for step-by-step instructions for executing this sample.
 
 ![Azure ML - AutoML for Images: Instance Segmentation](img/01.png?raw=true "Azure ML - AutoML for Images: Instance Segmentation")
-
-Follow the 'Getting Started' guide below for step-by-step instructions for executing this sample.
 
 ## Getting Started
 
@@ -60,7 +59,7 @@ After cloning the repo you should see a directory structure that looks like what
 
 ![Folder Structure](img/07.png?raw=true "Folder Structure")
 
-### Run 01. Notebook to Setup AML Environment
+### Run 01 Notebook to Setup AML Environment
 
 Double-click the `01_Setup_AML_Env.ipynb` notebook from the file explorer to open the environment setup notebook. This notebook contains sample code to create a compute cluster for model training, upload sample street images to an AML-linked datastore, and create/register a labeled dataset that can be used as an input to an AutoML for Images training job.
 
@@ -82,16 +81,37 @@ After executing all cells (should take ~1 minute) you can validate the setup ins
 
 ![Image Datasets](img/11.png?raw=true "Image Datasets")
 
-### Run 02. Notebook to Create AutoML for Images Training Pipeline & Submit Pipeline Run
+### Run 02 Notebook to Create AutoML for Images Training Pipeline & Submit Pipeline Run
 
 From JupyterLab, double-click the `02_Create_AML_Model_Training_Pipeline.ipynb` notebook to create a reusable instance segmentation model training pipeline that leverages AutoML for Images under the hood. Again, from the top menubar click Run and then select 'Run All Cells' to trigger all cells in the notebook.
 
+After executing all cells (should take ~1 minute) you can validate creation of the AML pipeline and submission of a new pipeline run.
+
+- Published Pipeline Endpoint named  `Instance Segmentation Model Training`. 
+
+![Pipeline Endpoint](img/12.png?raw=true "Pipeline Endpoint")
+
+- Submitted experiment named `DEMO_AutoML_InstanceSegmentation`
+
+
+
+### Run 03 Notebook to Deploy Trained Model to Real-Time Endpoint and Test
+
+🚨<i>Note: You must wait for your previous model training experiment to complete prior to executing this notebook. In previous tests, this experiment has taken ~2 hours to complete. As you test with your own datasets, this runtime will increase/decrease based on dataset size.</i>🚨
+
+From JupyterLab, double-click the `03_Instance_Segmentation_Model_Testing.ipynb` notebook and again click Run from the top menubar then select 'Run All Cells' to run the full notebook. This will deploy a new inferencing compute resource `cluster-aks` and deploy your registered `Street_Segmentation_Model` to this endpoint, then submit sample images via an API call for scoring and display within the notebook.
+
+
+## Adapting and Extending...
+
+Create labeled datasets and use as inputs to model training operations
+Alter the type of AutoML for Images job
 
 ## Sample Images
-Sample images used within this repository were retrieved from the [CBCL StreetScenes Challenge Framework](http://cbcl.mit.edu/software-datasets/streetscenes/) which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
+Acknowledgement - Sample images used within this repository were retrieved from the [CBCL StreetScenes Challenge Framework](http://cbcl.mit.edu/software-datasets/streetscenes/) which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
 
 -----
 
-[StreetScenes: Towards Scene Understanding in Still Images](http://citeseerx.ist.psu.edu/viewdoc/summary;jsessionid=2CC628AB1C394A3FC44C9FC5EF111062?doi=10.1.1.72.3289) –Stanley Michael Bileschi — 2006 — PHD DISSERTATION, MASSACHUSETTES INST. OF TECHNOLOGY
+[StreetScenes: Towards Scene Understanding in Still Images](http://citeseerx.ist.psu.edu/viewdoc/summary;jsessionid=2CC628AB1C394A3FC44C9FC5EF111062?doi=10.1.1.72.3289) –Stanley Michael Bileschi — 2006 — PHD DISSERTATION, MASSACHUSETTS INST. OF TECHNOLOGY
 
 -----
