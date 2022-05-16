@@ -2,10 +2,8 @@
 
 Auzre Machine Learning's [AutoML for Images](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-image-models) functionality can be used to train custom image classification, object detection, and instance segmentation models. The notebooks contained within this sample repository demonstrate an end-to-end sample for: 
 
-✅ Creating compute resources for training and inferencing operations
-
+✅ Creating compute resources for training and inferencing operations</br>
 ✅ Uploading sample images to an AML datastore 
-
 ✅ Creating and registering a labeled image dataset
 
 ✔️ Building and publishing a reusable model training pipeline which submits an AutoML for Images training job
