@@ -91,8 +91,9 @@ After executing all cells (should take ~1 minute) you can validate creation of t
 
 ![Pipeline Endpoint](img/12.png?raw=true "Pipeline Endpoint")
 
-- Submitted experiment named `DEMO_AutoML_InstanceSegmentation`
+- Submitted experiment named `DEMO_AutoML_InstanceSegmentation`. This pipeline submission will also create a child run that appears under this experiment list once the experiment run begins. <i>Note:</i> Some additional time is spent during your first experiment run to build an training environment (docker image) and spin up required compute. 
 
+![Experiment](img/13.png?raw=true "Experiment")
 
 
 ### Run 03 Notebook to Deploy Trained Model to Real-Time Endpoint and Test
