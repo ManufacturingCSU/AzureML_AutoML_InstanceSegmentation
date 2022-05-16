@@ -161,7 +161,7 @@ To create a labeled dataset using the Azure ML data labeling tools see the artic
 
 Once your pipeline run is complete, you should see a new model added to your registry which matches the name you provided above!
 
-## Sample Images
+## Acknowledgement 
 Acknowledgement - Sample images used within this repository were retrieved from the [CBCL StreetScenes Challenge Framework](http://cbcl.mit.edu/software-datasets/streetscenes/) which is a collection of images, annotations, software and performance measures for object detection. Each image was taken from a DSC-F717 camera at in and around Boston, MA. For more information on this collection see Stanley Bileschi's Doctoral Thesis cited below.
 
 -----
