@@ -38,7 +38,7 @@ from azureml.automl.core.shared.constants import ImageTask
 tuning_settings = {
     "iterations": 20,
     "max_concurrent_iterations": 5,
-    "hyperparameter_sampling": GridParameterSampling({'model_name': choice('maskrcnn_resnet18_fpn', 'maskrcnn_resnet34_fpn', 'maskrcnn_resnet50_fpn','maskrcnn_resnet101_fpn','maskrcnn_resnet152_fpn', 'yolov5'), 'number_of_epochs': 50, 'img_size': 640}),
+    "hyperparameter_sampling": GridParameterSampling({'model_name': choice('maskrcnn_resnet18_fpn', 'maskrcnn_resnet34_fpn', 'maskrcnn_resnet50_fpn','maskrcnn_resnet101_fpn','maskrcnn_resnet152_fpn'), 'number_of_epochs': 50, 'img_size': 640}),
     "enable_early_stopping": False
 }
 
