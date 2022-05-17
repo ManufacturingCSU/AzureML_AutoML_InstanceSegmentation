@@ -54,7 +54,7 @@ From the newly opened terminal execute the following commands to clone this repo
 
 ```
 cd Users/<YOUR-USERNAME>
-git clone https://github.com/nickwiecien/AzureML_AutoML_for_Images_Instance_Segmentation
+git clone https://github.com/ManufacturingCSU/AzureML_AutoML_InstanceSegmentation
 ```
 
 After cloning the repo you should see a directory structure that looks like what is shown below:
